@@ -11,7 +11,7 @@ function createWindow() {
     autoHideMenuBar: true,
     ...(process.platform === 'linux'
       ? {
-          icon: path.join(__dirname, '../../build/icon.png')
+          icon: path.join(__dirname, '../../build/icon.svg')
         }
       : {}),
     webPreferences: {
