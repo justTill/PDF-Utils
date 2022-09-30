@@ -1,37 +1,36 @@
 <template>
-  <div class="header">
-    <div class="headerImage">
-      <img src="./assets/titleIcon.svg" width="100" height="100"/>
+    <div id="app">
+      <div class="content">
+        <Header></Header>
+        <Actions name="Hallo"></Actions>
+      </div>
+      <footer class="footer">This is a footer</footer>
     </div>
-    <div class="headerText">
-      <span class="title">PDF-Utils</span>
-      <span class="titleText">What do you want to do ?</span>
-    </div>
-    <actions></actions>
-  </div>
 </template>
 
 <script>
-
+import Actions from './components/Actions.vue';
+import Header from './components/Header.vue';
+export default{
+  name:"app",
+  components: { Actions, Header }
+}
 </script>
 
 
 <style lang="less">
 @import './assets/css/styles.less';
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
-  
+html, body {
+  height: 100%;
 }
-.headerText {
+#app {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-.title {
-  font-size: 30px;
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
 }
 </style>
