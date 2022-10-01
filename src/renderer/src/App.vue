@@ -2,18 +2,19 @@
     <div id="app">
       <div class="content">
         <Header></Header>
-        <Actions name="Hallo"></Actions>
+        <ActionView></ActionView>
       </div>
       <footer class="footer">This is a footer</footer>
     </div>
 </template>
 
 <script>
-import Actions from './components/Actions.vue';
+import ActionView from './components/ActionView.vue';
 import Header from './components/Header.vue';
+
 export default{
   name:"app",
-  components: { Actions, Header }
+  components: {ActionView, Header}
 }
 </script>
 
