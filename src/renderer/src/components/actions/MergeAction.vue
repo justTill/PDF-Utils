@@ -1,12 +1,15 @@
 <template>
-  <div>
+  <div v-if="shouldBeShown">
+    Hallo
   </div>
 </template>
 <script>
 export default {
   name: "MergeA€ction",
   components: {},
-  props: {},
+  props: {
+    shouldBeShown: Boolean
+  },
   computed: {},
   methods: {}
 }

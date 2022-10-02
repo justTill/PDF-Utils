@@ -2,14 +2,13 @@
   <div class="baseAction">
     <img :src="imgName" alt="mergePdfs">
     <span>{{ shortText }}</span>
-    <slot/>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: "BaseAction",
+  name: "NavItem",
   components: {},
   props: {
     imgName: String,

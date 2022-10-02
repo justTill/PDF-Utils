@@ -18,14 +18,15 @@ export default {
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   gap: 10px;
-  
+
 }
 .headerText {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 10px;
 }
 .title {
   font-size: 30px;
