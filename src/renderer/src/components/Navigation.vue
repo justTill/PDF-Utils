@@ -1,33 +1,27 @@
 <template>
   <div class="actions">
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
-    <NavItem class="action" img-name="actions/merge.svg" short-text="Merge PDF together"></NavItem>
+    <NavItem @click="navigateToAction(ACTIONS.MERGE)" class="action" img-name="actions/merge.svg"
+             short-text="Merge PDF together"></NavItem>
   </div>
 </template>
 <script>
 import MergeAction from "./actions/MergeAction.vue";
 import NavItem from "./NavItem.vue";
+import {ACTIONS} from "../utils/Actions.js";
 
 export default {
   name: "Navigation",
   components: {NavItem, MergeAction},
   data() {
     return {
-      currentAction: null
+      ACTIONS
     }
   },
-  props: {},
+  props: {
+    navigateToAction: Function,
+  },
   computed: {},
-  methods: {}
+  methods: {},
 }
 </script>
 <style lang="less" scoped>

@@ -3,10 +3,10 @@
       <Header class="header"></Header>
       <div class="content">
         <div class="navigationContainer">
-          <Navigation class="navigation"></Navigation>
+          <Navigation :navigate-to-action="navigateToAction" class="navigation"></Navigation>
         </div>
         <div class="main">
-          <div>Text</div>
+          <ActionView :active-action="currentAction"></ActionView>
           <Footer class="footer"></Footer>
         </div>
       </div>
@@ -17,10 +17,23 @@
 import Header from './components/Header.vue';
 import Navigation from "./components/Navigation.vue";
 import Footer from "./components/Footer.vue";
+import ActionView from "./components/ActionView.vue";
+import {ACTIONS} from "./utils/Actions.js"
 
 export default {
   name: "app",
-  components: {Footer, Navigation, Header}
+  components: {ActionView, Footer, Navigation, Header},
+  data() {
+    return {
+      ACTIONS,
+      currentAction: ACTIONS.NONE
+    }
+  },
+  methods: {
+    navigateToAction: function (action) {
+      this.currentAction = action
+    }
+  }
 }
 </script>
 
